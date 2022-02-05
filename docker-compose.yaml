@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+
+  h2:
+    container_name: 'h2'
+    hostname: 'h2'
+    image: 1000kit/h2
+    ports:
+      - "7071:8181"
+      - "1522:1521"
+    volumes:
+      - h2-data:/opt/h2-data
+
+volumes:
+  h2-data:
